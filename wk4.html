@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        function showProperties(obj, objName)
+        {
+            var result = "";
+            for (var prop in obj)
+            {
+                if (obj.hasOwnProperty(prop))
+                {
+                    result += objName + "." + prop + "=" + obj[prop] + "\n<br>";
+                }
+            }
+            return result;
+        }
+        var aBook = new Object();
+        aBook.Title = "Javascript Essentials";
+        document.write(showProperties(aBook, "aBook"));
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        function Employee(empName, empID)
+        {
+            this["First Name"] = empName;
+            this.ID = empID;
+        }
+        var employee = new Employee("Jim", "123456789");
+        var employee2 = new Employee("LI", "300735072");
+        //employee["First Name"] = "Jim";
+        //employee.ID = "123456789";
+        document.write("<pre>" + showProperties(employee, "employee") + "<pre>");
+        document.write("<pre>" + showProperties(employee2, "employee2") + "<pre>");
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        var computerPrototype = { make: "Dell", OS: "Windows8" };
+        document.write("<pre>" + showProperties(computerPrototype, "computerPrototype") + "<pre>");
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        var aComputer = Object.create(computerPrototype);
+        document.write("<pre>" + showProperties(aComputer, "computerPrototype") + "<pre>");
+        aComputer.make = "IBM";
+        aComputer.OS = "Linux";
+        document.write("<pre>" + showProperties(aComputer, "computerPrototype") + "<pre>");
+        //+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+        var d1 = Date();
+        var d2 = new Date(2015, 01, 01, 09, 53);
+        alert(d1);
+        alert(d2);
+
+
+    </script>
+
+</body>
+</html>
