@@ -2,18 +2,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title></title>
+    <script type="text/javascript" src="myScript.js"></script>
 </head>
 <body>
     <form name="myForm" id="theForm" action="myForm.aspx" method="post" onsubmit="return validateForm()">
         <label>First Name:</label>
-        <input id="Text1" type="text" name="firstName" width="30" />
+        <input id="firstName" type="text" name="firstName" width="30" />
+        <br />
+        <label>Last Name:</label>
+        <input id="lassttName" type="text" name="lassttName" width="30" />
+        <br />
+        <label>E-mail:</label>
+        <input id="email" type="text" name="email"/>
+        <br />
+        <label>Quantity:</label>
+        <input id="quantity" type="text" name="quantity" />
+        <br />
+        <label>This is a protected text area:</label>
+        <textarea disabled>you can read this but you cannot change this!</textarea>
         <br />
         <label>Check it:</label>
         <input type="checkbox" id="myCheckBox" />
         <br />
         <label for="radioGroup">Chose your favorite boook:</label>
-        <input type="radio" name="radioGroup" value="Javascript" />One
-        <input type="radio" name="radioGroup" value="Java Coding" />Two
+        <label>COMP229-Javascript</label>
+        
+        <input type="radio" name="radioGroup" value="Javascript" />
+        <label>COMP228-Java Coding</label>
+        
+        <input type="radio" name="radioGroup" value="Java Coding" />
+        <br />
         <input id="Submit1" type="submit" value="submit" />
 
 

@@ -9,6 +9,6 @@ public partial class myForm : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        FormSubmited.Text = "Thank you, " + Request.Form["firstName"] + " " + Request.Form["lassttName"] + "!";
     }
 }
